@@ -1,0 +1,47 @@
+<div class="registerDiv">
+  <div class="registerModel">
+    <form [formGroup]="RegisterForms" (ngSubmit)="submitForm()">
+
+      <h2>WELCOME</h2>
+      <div class="Registerusername">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="text" placeholder="Username" formControlName="firstname" name="firstname" id="username" maxlength="15" /></div>
+        <div class="errorContainer" *ngIf="RegisterForms.controls['firstname'].dirty">
+                        <p class="error" *ngIf="RegisterForms.controls['firstname'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>User Name can't be blank</p>
+                        <p class="error" *ngIf="RegisterForms.controls['firstname'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>User Name contain only alphabets</p>
+        </div>
+      <div class="Registerusername">
+        <i class="fa fa-phone" aria-hidden="true"></i
+          ><input type="text" placeholder="Phoneno" formControlName="Phoneno" name="Phoneno" id="Phoneno" maxlength="10" minlength="10" /></div>
+        <div class="errorContainer" *ngIf="RegisterForms.controls['Phoneno'].dirty">
+                        <p class="error" *ngIf="RegisterForms.controls['Phoneno'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Phone number can't be blank</p>
+                        <p class="error" *ngIf="RegisterForms.controls['Phoneno'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Enter valid Phoneno</p>
+                      </div>
+
+      <div class="Registerusername">
+        <i class="fa fa-envelope" aria-hidden="true"></i
+        ><input type="email" placeholder="G-mail" formControlName="email" name="email" id="password" /></div>
+        <div class="errorContainer" *ngIf="RegisterForms.controls['email'].dirty">
+                        <p class="error" *ngIf="RegisterForms.controls['email'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Email can't be blank</p>
+                        <p class="error" *ngIf="RegisterForms.controls['email'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Enter valid mail-id</p>
+                      </div>
+      <div class="Registerusername">
+        <i class="fa fa-key" aria-hidden="true"></i>
+        <input type="password" placeholder="password" formControlName="password" name="password" id="password" required/>
+      </div>
+        <div class="errorContainer" *ngIf="RegisterForms.controls['password'].dirty">
+                        <p class="error" *ngIf="RegisterForms.controls['password'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>password can't be blank</p>
+                        <p class="error" *ngIf="RegisterForms.controls['password'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Password Must Contains <br>1.Atleast One UpperCase <br>2.Atleast One LowerCase <br>3.Atleast One Symbol <br>4.Atleast One Number <br>5.Minimum Length should be 8 <br>6.Maximum length should be 12</p>
+                      </div>
+      <div class="Registerusername">
+        <i class="fa fa-unlock-alt" aria-hidden="true"> </i>
+        <input type="password" placeholder="confirm password" formControlName="confirm" name="confirm"  id="confirm"  required/></div>
+        <div class="errorContainer" *ngIf="RegisterForms.controls['confirm'].dirty">
+                        <p class="error" *ngIf="RegisterForms.controls['confirm'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>confirm password can't be blank</p>
+                       <p class="error" *ngIf="RegisterForms.controls['confirm'].errors?.['ConfirmedValidator']">Password doesn't match</p>
+                      </div>
+     <p><button class="registerconfirm" [disabled]="!RegisterForms.valid">Register</button></p>
+        <p style="color: red; font-size: 12px; cursor: pointer; text-align: center; margin-top: 5%; font-family: 'Times New Roman', Times, serif;" (click)="gologin()" >Go to login</p>
+    </form>
+  </div>
+</div>

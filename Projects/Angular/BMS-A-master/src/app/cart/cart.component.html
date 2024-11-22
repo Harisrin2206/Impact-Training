@@ -1,0 +1,56 @@
+<!-- when cart contains items -->
+<ng-container *ngIf="products.length !== 0">
+  <div class="top"></div>
+  <div class="container">
+    <div class="card-table">
+      <div class="cart-product">
+        <table class="table responsive">
+          <thead>
+            <tr>
+              <th>S.NO</th>
+              <th>DELETE</th>
+              <th>PRODUCT IMAGE</th>
+              <th>PRODUCT NAME</th>
+              <th>PRICE</th>
+              <!-- <th>QUANTITY</th> -->
+              <th>TOTAL</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let item of products; let i = index">
+            <tr class="cartitems">
+              <td>{{ i + 1 }}</td>
+              <td><i class="fa-sharp fa-solid fa-trash" (click)="removeone(item)"></i></td>
+              <td><img style="width:100px;height:100px" [src]="item.MainImage"></td>
+              <td>{{ item.ProductName }}</td>
+              <td>{{ item.Price | currency:'INR':'': '1.0-0' }}</td>
+              
+              <td>{{ hello }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="emptyCart"></div>
+        <div>
+          <button (click)="emptycart()" class="emptycart">Empty Cart</button>
+          <button class="Checkout">Check Out</button>
+          <strong>Grand Total: {{ hello | currency:'INR':'symbol': '1.0-0' }}</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<!-- when cart is empty -->
+<ng-container *ngIf="products.length === 0">
+  <div class="top"></div>
+  <div class="container">
+    <div class="card">
+      <h5 class="card-title">My Cart</h5>
+    </div>
+    <div class="center">
+      <img src="../assets/images/emptycart1.png"><br><br>
+      <h4>Your Cart is Empty!</h4>
+      <h6>Add Items to it Now</h6>
+      <button class="shop-now">Shop Now</button>
+    </div>
+  </div>
+</ng-container>

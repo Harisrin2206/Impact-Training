@@ -1,0 +1,157 @@
+/* .top{
+  margin-top: 120px;
+} */
+/* cart empty */
+/* .card{
+  height: 60vh;
+  margin: 25px;
+  padding: 25px;
+}
+.center{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+h4,h6{
+  font-weight: 400;
+}
+.shop-now{
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 12px;
+  background-color: cornflowerblue;
+  color: #fff;
+  border: 1px solid cornflowerblue;
+}
+
+
+/* cart display products
+.card-table{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: none;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip:border-box;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: .25rem;
+  text-align: center;
+}
+.fa-trash{
+  color: crimson;
+  font-size: 30px;
+  cursor: pointer;
+
+}
+.fa-circle-left, .fa-circle-right{
+  font-size: 20px;
+  padding: 0 12px;
+  cursor:pointer;
+
+}
+
+.emptycart{
+padding: 8px 16px;
+color: #fff;
+background-color: rgb(169, 20, 20);
+outline: none;
+
+}
+.Checkout{
+  padding: 8px 16px;
+color: #fff;
+background-color: rgb(16, 96, 33);
+outline: none;
+margin-left: 900px;
+} */
+/* Common Styles */
+.top {
+  height: 50px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Cart Product Styles */
+.card-table {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.cartitems {
+  background-color: #f9f9f9;
+}
+
+img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.emptyCart {
+  height: 50px; /* To create space below the table */
+}
+
+button.emptycart,
+button.Checkout {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button.emptycart:hover,
+button.Checkout:hover {
+  background-color: #0056b3;
+}
+
+/* Empty Cart Styles */
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+img {
+  max-width: 200px;
+}
+
+h4,
+h6 {
+  margin: 10px 0;
+}
+
+button.shop-now {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button.shop-now:hover {
+  background-color: #1a682c;
+}

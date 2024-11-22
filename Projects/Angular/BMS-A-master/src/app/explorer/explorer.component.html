@@ -1,0 +1,136 @@
+<app-header-footer></app-header-footer>
+<div class="divided"><div class="img"><div class="favorite">
+  <i class="fa-solid fa-2x fa-heart"></i>
+ </div>
+ <img src="{{finalProduct.MainImage}}"  id="" alt="">
+</div>
+<div class="info">
+  <h3> -------------------Harley Davidson™---------------------</h3><br>
+  <h1> {{finalProduct.ProductName}} </h1>
+
+  <h2>PRICE</h2><span>{{finalProduct.Price}}</span>
+  <h2>Harley Davidson {{finalProduct.ProductName}} Key Specifications</h2>
+  <table id="table_view">
+    <th id="heading">
+      <tr>
+        <td>Engine</td>
+        <td><span> 1868cc</span></td>
+        <td>Kerb Weight</td>
+        <td><span> 306kg</span></td>
+      </tr>
+      <tr>
+        <td>Maxpower</td>
+        <td><span> 93.8bhp</span></td>
+        <td>Gears</td>
+        <td><span> 6 speed</span></td>
+      </tr>
+      <tr>
+        <td>Mileage</td>
+        <td><span>18.1kmpl</span></td>
+        <td>Starting</td>
+        <td><span>Self start</span></td>
+      </tr>
+    </th>
+  </table>
+
+</div>
+</div>
+<div class="wallpaper">
+  <img src="{{finalProduct.ImageWallpaper}}" alt="">
+  <h2>Amped-up performance in every ride.</h2>
+</div>
+<div class="flexbox">
+  <img src="{{finalProduct.Image1}}" alt="" height="370px" >
+  <img src="{{finalProduct.Image2}}" alt="" height="370px" >
+  <img src="{{finalProduct.Image3}}" alt="" height="370px">
+
+</div>
+<div class="divided">
+<div class="flexbox1">
+  <h2>PERFORMANCE & HANDLING</h2>
+  <p><span>01 MILWAUKEE-EIGHT™ 114</span><br>
+    Loads of torque for on-demand power you can feel with each twist, along with the familiar H-D sound. <br>
+
+    <span>02 ELECTRONIC CRUISE CONTROL </span><br>
+    For long-distance runs, there's nothing better than letting your bike do all the work. Cruise Control puts you <br> just minutes away from true riding bliss. <br>
+
+    <span>03 ENGINE</span><br>
+    The {{finalProduct.ProductName}} engine has a displacement of 1,868cc and features four valves per cylinder. <br>
+
+    <span>04 ACCELERATION</span><br> The {{finalProduct.ProductName}} is known for its quick acceleration, thanks to the powerful V-twin engine.<br>
+
+    <span>05HANDLING</span><br> The {{finalProduct.ProductName}} bike's low center of gravity also helps with stability and maneuverability.<br>
+
+    <span>06 BRAKES</span><br> The {{finalProduct.ProductName}}  helps improve braking performance and control.<br>
+
+    <span>07 EXHAUST</span><br> The {{finalProduct.ProductName}} features a 2-into-2 exhaust system, The exhaust is also tuned to improve performance and reduce emissions.<br>
+</p>
+
+<h4>"Screw it, let's ride."</h4>
+<h5>-Harley Davidson</h5>
+</div>
+<div class="img1">
+<img src="{{finalProduct.Image4}}" alt="" width="95%" height="600px">
+</div>
+</div>
+<div class="stamp">
+  <img src="../../assets/images/stamp.jpg"  height="250px" width="250px" alt="">
+</div>
+ <div class="info1">
+  <div class="heading">
+<h3> -------------------Harley Davidson™---------------------</h3>
+<h1>{{finalProduct.ProductName}}</h1>
+</div><div class="btn">
+<button id="menu_show" (click)="menu_open()"><a  ><i class="fa-solid fa-1.5x fa-cart-shopping"></i>Buy Now</a></button>
+</div>
+</div>
+<dialog class="modal">
+<div class="container">
+  <h2>Bike Purchase Form &nbsp; &nbsp;<i class="fa fa-times" aria-hidden="true" (click)="close_show()"></i></h2>
+  <form [formGroup]="formsImport" (ngSubmit)="submitForm()" >
+    <div class="form-group">
+      <label for="name">Name:</label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <input type="text" id="name" name="name" formControlName="firstname">
+      <div class="errorContainer" *ngIf="formsImport.controls['firstname'].dirty">
+        <p class="error" *ngIf="formsImport.controls['firstname'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>User Name can't be blank</p>
+        <p class="error" *ngIf="formsImport.controls['firstname'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>User Name contain only alphabets</p>
+</div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <input type="text" id="email" name="email" formControlName="email">
+      <div class="errorContainer" *ngIf="formsImport.controls['email'].dirty">
+        <p class="error" *ngIf="formsImport.controls['email'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Email can't be blank</p>
+        <p class="error" *ngIf="formsImport.controls['email'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Enter valid mail-id</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      <input type="text" id="phone" name="phone" formControlName="Phoneno">
+      <div class="errorContainer" *ngIf="formsImport.controls['Phoneno'].dirty">
+        <p class="error" *ngIf="formsImport.controls['Phoneno'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Phone number can't be blank</p>
+        <p class="error" *ngIf="formsImport.controls['Phoneno'].errors?.['pattern']"><i class="fas fa-exclamation-circle"></i>Enter valid Phoneno</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="bike">Bike : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; {{finalProduct.ProductName}}</label>
+
+
+    </div>
+    <div class="form-group">
+      <label for="color">Bike Color:</label>&nbsp;
+      <select id="bike" name="bike" formControlName="color">
+        <option value="">Select Bike Colour</option>
+        <option value="ROYAL RED & BLACK">ROYAL RED & BLACK</option>
+        <option value="BLACK & WHITE">BLACK & WHITE</option>
+        <option value="BLUE & BLACK">BLUE & BLACK</option>
+      </select>
+      <div class="errorContainer" *ngIf="formsImport.controls['color'].dirty">
+        <p class="error" *ngIf="formsImport.controls['color'].errors?.['required']"><i class="fas fa-exclamation-circle"></i>Phone number can't be blank</p>
+    </div></div>
+    <div class="form-group">
+      <input type="submit" value="Submit"  [disabled]="!formsImport.valid">
+      <br><br><br>
+    </div>
+  </form> </div></dialog>
+<app-footer></app-footer>

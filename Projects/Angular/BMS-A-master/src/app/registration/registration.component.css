@@ -1,0 +1,113 @@
+.registerDiv{
+  height: 100%;
+ width: 100%;
+ margin-top: 10%;
+}
+.registerModel{
+ display: flex;
+ margin: 2% 40%;
+ padding: 3% ;
+ width: fit-content;
+ box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.75);
+}
+::placeholder{
+ font-family: 'Times New Roman', Times, serif;
+}
+.Registerusername{
+ margin-top: 15%;
+ display: flex;
+}
+.head-content{
+ margin-left: 30%;
+}
+.exit{
+ float: right;
+}
+.exit:hover{
+ color: red;
+ padding: 1%;
+ cursor: pointer;
+}
+input
+{
+ border: none;
+   background-color: transparent;
+   outline: none;
+   border-bottom: 2px solid black;
+   margin-left: 5%;
+   font-size: 15px;
+
+}
+h2{
+ text-align: center;
+}
+.registerconfirm{
+margin-left: 33%;
+margin-top:10%;
+}
+button{
+ padding: 5%;
+ cursor: pointer;
+ border: none;
+ position: relative;
+ background-color: orangered;
+ border-bottom: 2px solid orangered;
+ font-weight: bold;
+ color: white;
+}
+button:hover{
+ background-color: rgb(253, 250, 250);
+ color:  orangered;
+
+
+}
+.error{
+ position: absolute;
+ font-size: 12px;
+ color: red;
+ padding-left: 1.5%;
+ font-family: 'Times New Roman', Times, serif;
+}
+@media (max-width: 768px) {
+  /* Styles for screens up to 768px */
+  .registerModel {
+    margin: 2% 10%;
+  }
+
+  .head-content {
+    margin-left: 10%;
+  }
+
+  .exit {
+    float: none;
+    text-align: right;
+  }
+
+  .registerconfirm {
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for screens up to 480px */
+  .registerDiv {
+    margin-top: 5%;
+  }
+
+  .registerModel {
+    margin: 2% 5%;
+  }
+
+  .Registerusername {
+    margin-top: 10%;
+  }
+
+  .head-content {
+    margin-left: 5%;
+  }
+
+  .registerconfirm {
+    margin-left: 5%;
+    margin-top: 5%;
+  }
+}

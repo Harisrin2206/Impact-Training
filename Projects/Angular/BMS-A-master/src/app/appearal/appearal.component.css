@@ -1,0 +1,63 @@
+
+* {
+  margin-top: 5%;
+}
+
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 20px; /* Gap between grid items */
+}
+
+.card {
+  width: 100%; /* Adjust the width as needed */
+}
+
+.card input[type="radio"] {
+  display: none;
+}
+
+.card label {
+  display: block;
+  border: 2px solid #f7f3f3;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+}
+
+.card input[type="radio"]:checked + label {
+  border-color: #000;
+  background-color: #fff;
+}
+
+.card input[type="button"] {
+  size: 10px;
+  background-color: orangered;
+  color: white;
+  font-weight: 800;
+  padding: 5px;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card button {
+  padding: 1rem 5rem;
+  background-color: #f74e05;
+  border-color: white;
+  border-radius: 5%;
+  color: white;
+  font-weight: 800;
+}
+
+.card button a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #eeecec;
+  font-weight: bolder;
+}

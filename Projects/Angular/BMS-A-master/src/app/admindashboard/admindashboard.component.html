@@ -1,0 +1,29 @@
+ <h1> Admin Dashboard </h1>
+  <table>
+    <thead>
+      <h2> Import  Bike  Approval   </h2>
+      <tr>
+        <th>S no</th>
+        <th>User Name</th>
+        <th>Contact</th>
+        <th>Email</th>
+        <th>Color</th>
+        <th>Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <!-- <th>Bank account</th> -->
+        <!-- <th>Denied</th> -->
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let detail of details">
+        <td>{{detail.id}}</td>
+        <td>{{detail.firstname}}</td>
+        <td>{{detail.Phoneno}}</td>
+        <td>{{detail.email}}</td>
+        <td>{{detail.color}}</td>
+        <td> <button id="Status"  >Approve</button>/<button id="delete" >Denied</button></td>
+        <!-- <td><button ><a routerLink="/account">View</a></button></td> -->
+        <td></td>
+      </tr>
+    </tbody>
+  </table>

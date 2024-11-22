@@ -1,0 +1,109 @@
+*{
+  margin-top: 6%;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.contact-info {
+  margin-top: 10%;
+  width: 43%;
+  /* background-color: grey; */
+  max-height: 900px;
+  border-radius: 10%;
+}
+.contact-form {
+  margin-top: 10%;
+  width: 55%;
+  background-color: orangered;
+  max-height: 650px;
+  border-color: solid 2px orange;
+  border-radius: 10%;
+}
+.contact-form h2{
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+label{
+  padding-left: 20%;
+  font-size: 20px;
+  color: white;
+  font-weight: bolder;
+}
+input {
+  width: 200px;
+  margin-left: 20%;
+}
+textarea{
+  width: 200px;
+  margin-left: 17%;
+}
+input[type=submit]{
+  width: 200px;
+  margin-left: 35%;
+  height: 30px;
+  background-color: white;
+  color: orangered;
+  font-weight: bolder;
+  border-color: orangered;
+  font-size: 20px;
+}
+.icon{
+  text-align: center;
+  background-color: rgb(181, 178, 178);
+  border-radius: 10%;
+}
+.social-media li{
+  list-style: none;
+}
+.social-media li a i{
+  margin-left: 1%;
+  color: white;
+}
+.map-container {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 10%;
+}
+.map-container iframe{
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 5%;
+    border-radius: 10px;
+  }
+
+  .contact-form {
+    background-color: orange;
+  }
+
+  label,
+  input,
+  textarea {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  input[type="submit"] {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .map-container {
+    height: 300px;
+    margin-bottom: 5%;
+  }
+}

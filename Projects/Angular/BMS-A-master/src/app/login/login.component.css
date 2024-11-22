@@ -1,0 +1,128 @@
+*{
+    margin: 4%;
+    padding: 0;
+}
+.login {
+    margin: 8rem auto;
+    padding: 40px 50px;
+    max-width: 500px;
+    border-radius: 5px;
+    background: #fff;
+    border-color: #000000;
+    box-shadow: 1px 1px 1px 1px #666;
+    position: relative;
+  }
+  .logo {
+    width: 65px;
+    height: 60px;
+    padding-left: 40%;
+    }
+    .login input {
+      width: 100%;
+      display: block;
+      box-sizing: border-box;
+      margin: 10px 0;
+      padding: 14px 12px;
+      font-size: 16px;
+      border-radius: 2px;
+      font-family: Raleway, sans-serif;
+    }
+
+  .login input[type=text],
+  .login input[type=password] {
+    border: 1px solid #c0c0c0;
+    transition: .2s;
+  }
+
+  .login input[type=text]:hover {
+    border-color: #f74e05;
+    outline: none;
+    transition: all .2s ease-in-out;
+  }
+
+  .login input[type=submit] {
+    border: none;
+    background: #f74e05;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s;
+    margin: 20px 0px;
+  }
+
+  .login input[type=submit]:hover {
+    background: #f74e05;
+  }
+
+    .login h2 {
+      margin: 20px 0 0;
+      color: #f74e05;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+  .login p {
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+
+  .links {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 1px solid #c0c0c0;
+    margin-bottom: 10px;
+  }
+
+  .links a {
+    display: table-cell;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  .links a:first-child {
+    text-align: left;
+  }
+
+  .links a:last-child {
+    text-align: right;
+  }
+
+    .login h2,
+    .login p,
+    .login a {
+      text-align: center;
+    }
+
+  .login a {
+    text-decoration: none;
+    font-size: .8em;
+  }
+
+  .login a:visited {
+    color: inherit;
+  }
+
+  .login a:hover {
+    text-decoration: underline;
+  }
+ .alert{
+  position: relative;
+ font-size: 12px;
+ color: red;
+ padding-left: 1.5%;
+ font-family: 'Times New Roman', Times, serif;
+ margin-top: 5px;
+ }
+ button{
+  padding: 5%;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  background-color: orangered;
+  border-bottom: 2px solid orangered;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  margin-left: 2px;
+ }

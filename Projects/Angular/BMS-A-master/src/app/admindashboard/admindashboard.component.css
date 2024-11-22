@@ -1,0 +1,50 @@
+h1{
+   font-size: 3rem;
+   color: orangered;
+   text-align: center;
+}
+h2{
+  text-transform: uppercase;
+  text-align: center;
+}
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-left: 5%;
+}
+
+/* Styles for table headings */
+th {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Styles for table data */
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Styles for loanStatus button */
+#Status a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#Status  {
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styles for delete button */
+#delete  {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

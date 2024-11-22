@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="sidebar">
+    <ul>
+      <li>
+        <a routerLink="#"><button class="orange">Dashboard</button></a>
+      </li>
+      <li>
+        <a routerLink="/admindashboard"><button>Product Management</button> </a>
+      </li>
+      <li>
+        <a routerLink="/admindashboards"><button>Settings</button></a>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="card">
+          <h2>Total Bikes</h2>
+          <p>500</p>
+        </div>
+        <div class="card">
+          <h2>Available Bikes</h2>
+          <p>350</p>
+        </div>
+        <div class="card">
+          <h2>Sold Bikes</h2>
+          <p>150</p>
+        </div>
+      </div>
+      <div class="graph">
+        <canvas id="bikeChart"></canvas>
+      </div>
+    </div>
+    <script>
+      var ctx = document.getElementById("bikeChart").getContext("2d");
+      var bikeChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+          datasets: [
+            {
+              label: "Bike Sales",
+              data: [50, 80, 120, 100, 200, 150],
+              backgroundColor: "rgba(54, 162, 235, 0.7)",
+              borderColor: "rgba(54, 162, 235, 1)",
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {  
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </div>
+</div>

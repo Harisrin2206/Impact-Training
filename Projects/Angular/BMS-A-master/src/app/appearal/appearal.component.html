@@ -1,0 +1,17 @@
+<app-header-footer></app-header-footer>
+
+  <div class="product-cards grid">
+    <div class="card" *ngFor="let item of sample">
+      <input type="radio" name="product" id="product1" checked />
+      <label for="product1">
+        <img src="{{item.MainImage}}" alt="Product 1" />
+        <h3>{{item.ProductName}}</h3>
+        <h3>Price: {{item.Price}}</h3><br>
+        <button (click)="addtocart(item)">
+          <i class="fa-solid fa-1.5x fa-cart-shopping"></i>Add To Cart
+        </button>
+      </label>
+    </div>
+  </div>
+
+<app-footer></app-footer>

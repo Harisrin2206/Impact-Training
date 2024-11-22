@@ -1,0 +1,67 @@
+.container {
+  text-align: center;
+  margin: 18% 50%;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border: 10px solid #4CAF50;
+  border-radius: 50%;
+  position: relative;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+
+}
+
+.tick {
+  width: 30px;
+  height: 60px;
+  border-bottom: 10px solid #4CAF50;
+  border-right: 10px solid #4CAF50;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 30px;
+  left: 35px;
+  animation: drawTick 0.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+h1 {
+  color: #4CAF50;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  margin-top: 20px;
+}
+button{
+  padding: 1rem 2.5rem;
+  border-radius: 3px;
+  background-color: #4CAF50;
+  color: white;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes drawTick {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 30px;
+    height: 60px;
+    opacity: 1;
+  }
+  100% {
+    width: 30px;
+    height: 60px;
+    opacity: 1;
+  }
+}

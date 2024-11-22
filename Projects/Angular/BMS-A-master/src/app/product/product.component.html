@@ -1,0 +1,21 @@
+<app-header-footer></app-header-footer>
+<div class="container">
+  <div class="grid">
+    <div class="card-container" *ngFor="let product of allProducts">
+      <a routerLink="/product/{{product.ProductName }}"
+        ><h3>View More</h3>
+        <h2 class="card-price">
+          <span class="currency">$</span>{{ product.Price }}
+        </h2>
+        <h1 class="card-title">{{ product.ProductName }}</h1>
+        <div class="card-image-container">
+          <img src="{{ product.ProductImage }}" alt="" />
+        </div>
+        <div class="favorite">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,34 @@
+<app-header-footer></app-header-footer>
+<div class="cards">
+  <div class="card" *ngFor="let item of sample">
+  <figure class="image-info">
+    <img src="{{ item.MainImage }}" />
+  </figure>
+  <div class="item-info">
+    <p class="description">{{ item.ProductName }}</p>
+
+    <p class="price">Rs : {{ item.Price }} </p>
+    <div class="choices">
+      <label for="color-select">Color:</label>
+      <select name="color" id="color-select">
+        <option value=""></option>
+        <option value="olive">olive & black</option>
+        <option value="blue">blue & black</option>
+        <option value="pink">pink & black</option>
+      </select>
+
+      <label for="quantity-select">Quantity:</label>
+      <select name="quantity" id="quantity-select">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
+  </div>
+  <button type="button" (click)="addtocart(item)">Add to Cart</button>
+</div>
+</div>
+<app-footer></app-footer>

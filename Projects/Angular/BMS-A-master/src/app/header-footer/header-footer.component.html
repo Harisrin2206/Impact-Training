@@ -1,0 +1,22 @@
+<div class="title">
+  <img src="../assets/images/1200px-Harley-Davidson_logo.svg.png" >
+  <h1>HARLEY DAVIDSON</h1>
+  <div class="wrap">
+<div class="cart" attr.current-count="{{cartDataCount}}" *ngIf="usersuccess" >
+  <a routerLink="/cart"><i class="fa-solid  fa-2x fa-cart-shopping"></i></a>
+ </div>
+ </div>
+</div>
+
+<nav>
+  <ul>
+    <li><a routerLink="/home" routerLinkActive="active">HOME</a></li>
+    <li><a routerLink="/product" routerLinkActive="active">MOTOR BIKES</a></li>
+    <li><a routerLink="/Accessories" routerLinkActive="active">ACCESSORIES</a></li>
+    <li><a routerLink="/Contact" routerLinkActive="active">CONTACT US</a></li>
+    <li><a routerLink="/login" (click)="authService.login()" *ngIf="!usersuccess"
+      routerLinkActive="active">LOGIN</a></li>
+    <li><a style="cursor: pointer; color: orangered;" (click)="logout()" *ngIf="usersuccess" routerLinkActive="active">LOG OUT</a></li>
+    <li><a style="text-transform: uppercase;">{{firstname}}</a></li>
+  </ul>
+</nav>

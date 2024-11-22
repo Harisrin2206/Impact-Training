@@ -1,0 +1,37 @@
+<app-header-footer></app-header-footer>
+<div class="main">
+       <img src="https://cdn.pixabay.com/photo/2016/08/22/22/04/motorcycle-1613022_1280.jpg" alt="">
+       <h2>HARLEY DAVIDSON's <span>120th ANNIVERSARY APPAREL</span></h2>
+       <a [routerLink]="'/product'"> <h3> EXPLORE <i class="fa-solid fa-angles-right"></i></h3></a>
+</div>
+
+<div class="divide">
+  <div class="box">
+    <img src="https://www.harley-davidson.com/content/dam/h-d/images/promo-images/2023/hero-card/2-up/mens-new-arrivals-hc-2-up.jpg?impolicy=myresize&rw=700" alt="">
+    <h4>SHOP MEN'S <a [routerLink]="'/Appearal'" (click)="men('men')"><i class="fa-solid fa-arrow-right"></i></a></h4>
+  </div>
+  <div class="box">
+    <img src="https://www.harley-davidson.com/content/dam/h-d/images/promo-images/2023/hero-card/2-up/womens-new-arrivals-hc-2-up.jpg?impolicy=myresize&rw=700" alt="">
+    <h4>SHOP WOMEN'S <a [routerLink]="'/Appearal'" (click)="women('women')"><i class="fa-solid fa-arrow-right"></i></a></h4>
+  </div>
+</div>
+ <video  src="../../assets/images/video.mp4" autoplay></video>
+<div class="divide1">
+  <div class="box">
+    <img src="https://www.harley-davidson.com/content/dam/h-d/images/promo-images/2022/1x1/mens-gm-hero-card-3-up.jpg?impolicy=myresize&rw=500" alt=""><h4>MEN'S GEAR & APPAREL
+  </h4>
+  <p>Express the rider inside on and off the bike with genuine H-D riding and casual gear. </p><br>
+  <h4>SHOP MEN'S <a [routerLink]="'/Appearal'" (click)="men('men')"><i class="fa-solid fa-arrow-right"></i></a></h4>
+  </div>
+  <div class="box">
+    <img src="https://www.harley-davidson.com/content/dam/h-d/images/promo-images/2022/1x1/gm-parts-us-hero-card-3-up.jpg?impolicy=myresize&rw=500" alt=""><h4>PARTS & ACCESSORIES
+    </h4><p>Throw it into high gear. Now is the perfect time to revamp your ride.</p><br>
+    <h4>SHOP PART'S <a [routerLink]="'/Accessories'"><i class="fa-solid fa-arrow-right"></i></a></h4>
+  </div>
+  <div class="box">
+    <img src="https://www.harley-davidson.com/content/dam/h-d/images/promo-images/2022/1x1/womens-gm-hero-card-3-up.jpg?impolicy=myresize&rw=500" alt=""><h4>WOMEN'S GEAR & APPAREL
+    </h4><p>Show the world who you ride with. Get all your H-D riding and casual gear here. </p><br>
+    <h4>SHOP WOMEN'S <a [routerLink]="'/Appearal'" (click)="women('women')"><i class="fa-solid fa-arrow-right"></i></a></h4>
+  </div>
+</div>
+<app-footer></app-footer>
