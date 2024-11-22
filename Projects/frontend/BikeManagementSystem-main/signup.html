@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/signup.css">
+</head>
+
+<body>
+        <nav>
+            <img src="/images/1200px-Harley-Davidson_logo.svg.png" class="logo">
+            <ul>
+                <li ><a href="#">HOME</a></li>
+                <li><a href="/motor bike.html">MOTOR BIKES</a></li>
+                <li><a href="#">GET THE LOOK</a>
+                    <div class="hide">
+                        <ul>
+                            <li><a href="/Aparel.html">APPAREL</a></li><br>
+                            <li><a href="#">ACCESSORIES</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="/contact us.html">CONTACT US</a></li>
+                <li class="action"><a href="/login.html">LOGIN</a></li>
+            </ul>
+
+        </nav>
+        <div class="signupFrm">
+            <form action="" class="form">
+              <h1 class="title">Sign up</h1>
+
+              <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" id="name">
+                <label for="" class="label">Name</label>
+              </div>
+        
+              <div class="inputContainer">
+                <input type="email" class="input" placeholder="a" id="email">
+                <label for="" class="label">Email</label>
+              </div>
+             
+              <div class="inputContainer">
+                <input type="tel" class="input" placeholder="a" id="phone">
+                <label for="" class="label">Phone Number</label>
+              </div>
+
+              <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" id="user">
+                <label for="" class="label">Username</label>
+              </div>
+        
+              <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" id="password">
+                <label for="" class="label">Password</label>
+              </div>
+        
+              <div class="inputContainer">
+                <input type="text" class="input" placeholder="a" id="conpass">
+                <label for="" class="label">Confirm Password</label>
+              </div>
+        
+              <input type="submit" class="submitBtn" value="Sign up" onclick="Fun()" >
+            </form>
+          </div>
+    </body>
+    <script>
+      function Fun(){
+        var name=document.getElementById("name").value;
+        var user=document.getElementById("user").value;
+        var email=document.getElementById("email").value;
+        var phone=document.getElementById("phone").value;
+        var pass = document.getElementById("password").value;
+        var confirm=document.getElementById("conpass").value;
+        
+      var valid=/^[A-Za-z]+$/;
+      if(name.match(valid)){
+        
+      }
+      else{
+        alert('Enter the valid name');
+        return false;
+      }
+      if(user.match(valid)){
+  
+      }
+      else{
+        alert('Username should only contain alphabets');
+        return false;
+      }
+      if(phone.length !=10 ||isNaN(phone)){
+        alert('phonenumber consists 10 digits');
+        return false;
+      }
+      if(pass.length <6 && pass.length>15){
+        alert('password should be must 6 to 15 letters');
+        return false;
+      }
+      if(pass != confirm){
+        alert('Passward and Confirm password have to be same');
+        return false;
+      }
+      alert('registered successfully');
+      window.open("login.html");
+    }
+    </script>
+    
+  
+    </html>
